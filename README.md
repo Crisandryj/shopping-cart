@@ -1,9 +1,57 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# shopping-cart
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Submit and update each section or for CV
+
+## My process
+
+-Decide what components need to be created
+-Figure out the state structure of each component
+-Add style
+-Deploy project
+
+### Built with
+
+# React + Vite
+
+- Javascript
+- React
+
+### What I learned
+
+I've learned how to use components to save data and have them intereact with eachother.
+
+To see how you can add code snippets, see below:
+
+```html
+<div>
+  <h1>CV Application</h1>
+  <General />
+  <Education key="{uuidv4()}" />
+  {edStack.map((comp) => comp.src)}
+  <button onClick="{onClickAdd}">+</button>
+  <button onClick="{onClickDelete}">-</button>
+  <Experience />
+  {expStack.map((comp) => comp.src)}
+  <button onClick="{onClickAddExp}">+</button>
+  <button onClick="{onClickDeleteExp}">-</button>
+</div>
+```
+
+### Continued development
+
+I look forward to conitinuing to apply componets to my sites allowing me to couple of html and js. I'm excited to combine this with my use of the rails framework.
