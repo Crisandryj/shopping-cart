@@ -15,7 +15,7 @@
 
 Users should be able to:
 
-- Submit and update each section or for CV
+- Add items to their shopping cart
 
 ## My process
 
