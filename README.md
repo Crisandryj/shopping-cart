@@ -19,10 +19,11 @@ Users should be able to:
 
 ## My process
 
--Decide what components need to be created
--Figure out the state structure of each component
--Add style
--Deploy project
+- Outlined visual for each page using Freeform
+- Decided component and file structure
+- Created components
+- style
+- Deploy project
 
 ### Built with
 
