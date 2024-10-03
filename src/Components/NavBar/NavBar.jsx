@@ -1,9 +1,13 @@
 import styles from "./NavBar.module.css";
+import shopCart from "../../assets/shopping-cart.svg";
 
 function NavBar() {
   return (
     <>
-      <h1>bllue</h1>
+      <button>
+        <img src={shopCart} className="logo-shop" alt="React logo" />
+      </button>
+      <button> </button>
     </>
   );
 }

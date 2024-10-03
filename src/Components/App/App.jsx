@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "./App.module.css";
 import NavBar from "../NavBar/NavBar";
 
 function App() {
