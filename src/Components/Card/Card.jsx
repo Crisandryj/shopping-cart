@@ -1,4 +1,4 @@
-function Card() {
+function Card(props) {
   return <></>;
 }
 
