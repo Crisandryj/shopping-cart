@@ -7,6 +7,7 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
+      <body></body>
     </>
   );
 }
