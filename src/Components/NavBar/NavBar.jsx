@@ -1,5 +1,6 @@
 import styles from "./NavBar.module.css";
 import shopCart from "../../assets/shopping-cart.svg";
+import home from "../../assets/home.svg";
 
 function NavBar() {
   return (
@@ -7,7 +8,10 @@ function NavBar() {
       <button>
         <img src={shopCart} className="logo-shop" alt="React logo" />
       </button>
-      <button> </button>
+      <button>
+        {" "}
+        <img src={home} className="logo-shop" alt="React logo" />
+      </button>
     </>
   );
 }
