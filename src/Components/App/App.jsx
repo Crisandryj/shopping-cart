@@ -1,5 +1,6 @@
 import { useState } from "react";
 import NavBar from "../NavBar/NavBar";
+import Card from "../Card/Card";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,7 +8,9 @@ function App() {
   return (
     <>
       <NavBar></NavBar>
-      <body></body>
+      <body>
+        <Card></Card>
+      </body>
     </>
   );
 }
