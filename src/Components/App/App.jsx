@@ -9,27 +9,26 @@ function App() {
   useEffect(() => {
     // fetch data
     const dataFetch = async () => {
-      const data = await (
+      const products = await (
         await fetch("https://fakestoreapi.com/products")
       ).json();
 
       // set state when the data received
-      setData(data);
+      setData(products);
     };
 
     dataFetch();
   }, []);
 
   console.log(data);
-
-  return (
-    <>
-      <NavBar></NavBar>
-      <div>
-        <Card></Card>
-      </div>
-    </>
-  );
+  // data.map((product) => {
+  //   return (
+  //     <>
+  //       <NavBar></NavBar>
+  //       <img src={product.image} alt="" />
+  //     </>
+  //   );
+  // });
 }
 
 export default App;
