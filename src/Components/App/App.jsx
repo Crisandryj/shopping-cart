@@ -21,6 +21,7 @@ function App() {
   }, []);
 
   console.log(data);
+
   // data.map((product) => {
   //   return (
   //     <>
