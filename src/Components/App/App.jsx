@@ -20,16 +20,23 @@ function App() {
     dataFetch();
   }, []);
 
-  console.log(data);
-
-  // data.map((product) => {
-  //   return (
-  //     <>
-  //       <NavBar></NavBar>
-  //       <img src={product.image} alt="" />
-  //     </>
-  //   );
-  // });
+  if (data) {
+    data.map((product) => {
+      return (
+        <>
+          <NavBar></NavBar>
+          <img src={product.image} alt="" />
+        </>
+      );
+    });
+  } else {
+    return (
+      <>
+        <NavBar></NavBar>
+        <p>Loading...</p>
+      </>
+    );
+  }
 }
 
 export default App;
