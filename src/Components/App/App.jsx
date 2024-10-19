@@ -1,23 +1,32 @@
 import { useState } from "react";
 import NavBar from "../NavBar/NavBar";
 import Card from "../Card/Card";
-import { useEffect } from "react";
+import { useEffect, NavLink } from "react";
 
 function App() {
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // fetch data
-    const dataFetch = async () => {
-      const products = await (
-        await fetch("https://fakestoreapi.com/products")
-      ).json();
-
-      // set state when the data received
-      setData(products);
+    const fetchDataForPosts = async () => {
+      try {
+        const response = await fetch("https://fakestoreapi.com/products");
+        if (!response.ok) {
+          throw new Error(`HTTP error: Status ${response.status}`);
+        }
+        let postsData = await response.json();
+        setData(postsData);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setData(null);
+      } finally {
+        setLoading(false);
+      }
     };
 
-    dataFetch();
+    fetchDataForPosts();
   }, []);
 
   if (data) {
