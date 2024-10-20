@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./App.module.css";
 import NavBar from "../NavBar/NavBar";
 import Card from "../Card/Card";
 import { useEffect, NavLink } from "react";
@@ -37,7 +38,7 @@ function App() {
         {data &&
           data.map(({ id, image }) => (
             <li key={id}>
-              <img src={image} alt="" />
+              <img src={image} alt="" className={styles.product} />
             </li>
           ))}
       </ul>

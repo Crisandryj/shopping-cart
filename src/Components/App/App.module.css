@@ -1,0 +1,13 @@
+.product {
+  background-color: blue;
+  height: 10%;
+  width: 10%;
+}
+
+.head {
+  color: blue;
+}
+
+ul {
+  list-style-type: none;
+}
