@@ -1,7 +1,12 @@
 .product {
-  background-color: blue;
-  height: 100%;
-  width: 100%;
+  background-color: rgb(163, 163, 193);
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
 }
 
 .head {
@@ -13,4 +18,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+img {
 }
