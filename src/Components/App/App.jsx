@@ -38,9 +38,9 @@ function App() {
         <NavBar />
         <ul>
           {data &&
-            data.map(({ id, image }) => (
+            data.map(({ id, image, title, price }) => (
               <li key={id}>
-                <img src={image} alt="" className={styles.product} />
+                <Card image={image} title={title} price={price}></Card>
               </li>
             ))}
         </ul>

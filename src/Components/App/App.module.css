@@ -1,22 +1,8 @@
-.product {
-  background-color: rgb(163, 163, 193);
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-  max-width: 100%;
-  height: auto;
-}
-
 ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 100px;
-  padding-left: 250px;
-  padding-right: 250px;
 }
 
 .main {
