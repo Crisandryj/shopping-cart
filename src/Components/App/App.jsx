@@ -34,7 +34,7 @@ function App() {
     return { loading } && <p> loading</p>;
   } else {
     return (
-      <>
+      <div className="main">
         <NavBar />
         <ul>
           {data &&
@@ -44,7 +44,7 @@ function App() {
               </li>
             ))}
         </ul>
-      </>
+      </div>
     );
   }
 }

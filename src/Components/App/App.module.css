@@ -9,16 +9,16 @@
   height: auto;
 }
 
-.head {
-  color: blue;
-}
-
 ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 100px;
+  padding-left: 250px;
+  padding-right: 250px;
 }
 
-img {
+.main {
+  grid-template-columns: 1fr;
 }
