@@ -31,17 +31,20 @@ function App() {
   }, []);
 
   if (!data) {
-    return <p>loading</p>;
+    return { loading } && <p> loading</p>;
   } else {
     return (
-      <ul>
-        {data &&
-          data.map(({ id, image }) => (
-            <li key={id}>
-              <img src={image} alt="" className={styles.product} />
-            </li>
-          ))}
-      </ul>
+      <>
+        <NavBar />
+        <ul>
+          {data &&
+            data.map(({ id, image }) => (
+              <li key={id}>
+                <img src={image} alt="" className={styles.product} />
+              </li>
+            ))}
+        </ul>
+      </>
     );
   }
 }
