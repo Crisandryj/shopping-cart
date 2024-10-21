@@ -1,7 +1,7 @@
 .product {
   background-color: blue;
-  height: 10%;
-  width: 10%;
+  height: 100%;
+  width: 100%;
 }
 
 .head {
@@ -10,4 +10,7 @@
 
 ul {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
