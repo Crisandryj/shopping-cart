@@ -3,11 +3,13 @@ import styles from "./App.module.css";
 import NavBar from "../NavBar/NavBar";
 import Card from "../Card/Card";
 import { useEffect, NavLink } from "react";
+import ShoppingCart from "../ShoppingCart/ShopCart";
 
 function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     const fetchDataForPosts = async () => {
@@ -33,19 +35,23 @@ function App() {
   if (!data) {
     return { loading } && <p> loading</p>;
   } else {
-    return (
-      <div className="main">
-        <NavBar />
-        <ul>
-          {data &&
-            data.map(({ id, image, title, price }) => (
-              <li key={id}>
-                <Card image={image} title={title} price={price}></Card>
-              </li>
-            ))}
-        </ul>
-      </div>
-    );
+    if (showCart == false) {
+      return (
+        <div>
+          <NavBar />
+          <ul>
+            {data &&
+              data.map(({ id, image, title, price }) => (
+                <li key={id}>
+                  <Card image={image} title={title} price={price}></Card>
+                </li>
+              ))}
+          </ul>
+        </div>
+      );
+    } else {
+      return <ShoppingCart />;
+    }
   }
 }
 

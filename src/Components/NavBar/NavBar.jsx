@@ -2,7 +2,7 @@ import styles from "./NavBar.module.css";
 import shopCart from "../../assets/shopping-cart.svg";
 import home from "../../assets/home.svg";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <>
       <button>
