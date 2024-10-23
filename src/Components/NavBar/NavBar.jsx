@@ -5,10 +5,10 @@ import home from "../../assets/home.svg";
 function NavBar(props) {
   return (
     <>
-      <button>
+      <button onClick={props.onClick}>
         <img src={shopCart} className="logo-shop" alt="React logo" />
       </button>
-      <button>
+      <button onClick={props.onClick}>
         {" "}
         <img src={home} className="logo-shop" alt="React logo" />
       </button>

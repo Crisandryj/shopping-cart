@@ -11,6 +11,14 @@ function App() {
   const [error, setError] = useState(null);
   const [showCart, setShowCart] = useState(false);
 
+  const toggleShowCart = () => {
+    if (showCart) {
+      setShowCart(false);
+    } else {
+      setShowCart(true);
+    }
+  };
+
   useEffect(() => {
     const fetchDataForPosts = async () => {
       try {
@@ -32,13 +40,13 @@ function App() {
     fetchDataForPosts();
   }, []);
 
-  if (!data) {
-    return { loading } && <p> loading</p>;
+  if (loading) {
+    return <p> loading</p>;
   } else {
     if (showCart == false) {
       return (
         <div>
-          <NavBar />
+          <NavBar onClick={toggleShowCart} />
           <ul>
             {data &&
               data.map(({ id, image, title, price }) => (
@@ -50,7 +58,12 @@ function App() {
         </div>
       );
     } else {
-      return <ShoppingCart />;
+      return (
+        <>
+          <NavBar onClick={toggleShowCart} />;
+          <ShoppingCart />
+        </>
+      );
     }
   }
 }
