@@ -10,6 +10,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showCart, setShowCart] = useState(false);
+  const [cart, setCart] = useState([]);
 
   const toggleShowCart = () => {
     if (showCart) {
@@ -17,6 +18,15 @@ function App() {
     } else {
       setShowCart(true);
     }
+  };
+
+  let nextId = 0;
+
+  const addToCart = (item) => {
+    cart.push({
+      id: nextId++,
+      item: item,
+    });
   };
 
   useEffect(() => {
@@ -51,10 +61,16 @@ function App() {
             {data &&
               data.map(({ id, image, title, price }) => (
                 <li key={id}>
-                  <Card image={image} title={title} price={price}></Card>
+                  <Card
+                    image={image}
+                    title={title}
+                    price={price}
+                    onClick={addToCart}
+                  ></Card>
                 </li>
               ))}
           </ul>
+          {console.log(cart)}
         </div>
       );
     } else {
