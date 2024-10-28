@@ -1,5 +1,16 @@
-import styles from "./Cart.module.css";
+import styles from "./CartItem.module.css";
 
-function CartItem() {}
+function CartItem(props) {
+  return (
+    <div className={styles.item}>
+      {console.log(props.image)}
+      <img src={props.image} alt="" />
+      <button>+</button>
+      <button>-</button>
+      <p>QTY</p>
+      <p>Total</p>
+    </div>
+  );
+}
 
 export default CartItem;
