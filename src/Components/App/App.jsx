@@ -70,7 +70,6 @@ function App() {
                 </li>
               ))}
           </ul>
-          {console.log(cart)}
         </div>
       );
     } else {

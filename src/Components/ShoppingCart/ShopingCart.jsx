@@ -1,13 +1,14 @@
 import CartItem from "../CartItem/CartItem";
 
 function ShoppingCart(props) {
-  return props.cart.forEach((item) => (
-    <>
-      {console.log(item.item.title)}
-      <CartItem image={item.item.image} />
-      <h1>hi</h1>
-    </>
+  const cartList = props.cart.map((item) => (
+    <CartItem image={item.item.image}></CartItem>
   ));
+  return (
+    <div>
+      <ul>{cartList}</ul>
+    </div>
+  );
 }
 
 export default ShoppingCart;

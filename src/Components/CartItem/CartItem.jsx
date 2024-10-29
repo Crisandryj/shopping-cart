@@ -4,7 +4,7 @@ function CartItem(props) {
   return (
     <div className={styles.item}>
       {console.log(props.image)}
-      <img src={props.image} alt="" />
+      <img className={styles.product} src={props.image} alt="" />
       <button>+</button>
       <button>-</button>
       <p>QTY</p>
