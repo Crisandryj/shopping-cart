@@ -3,7 +3,7 @@ import styles from "./App.module.css";
 import NavBar from "../NavBar/NavBar";
 import Card from "../Card/Card";
 import { useEffect, NavLink } from "react";
-import ShoppingCart from "../ShoppingCart/ShopCart";
+import ShoppingCart from "../ShoppingCart/ShopingCart";
 
 function App() {
   const [data, setData] = useState(null);
@@ -76,7 +76,7 @@ function App() {
     } else {
       return (
         <>
-          <NavBar onClick={toggleShowCart} />;
+          <NavBar onClick={toggleShowCart} />
           <ShoppingCart cart={cart} />
         </>
       );
