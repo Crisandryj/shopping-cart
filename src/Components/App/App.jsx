@@ -62,6 +62,7 @@ function App() {
               data.map(({ id, image, title, price }) => (
                 <li key={id}>
                   <Card
+                    key={id}
                     image={image}
                     title={title}
                     price={price}
@@ -76,7 +77,7 @@ function App() {
       return (
         <>
           <NavBar onClick={toggleShowCart} />
-          <ShoppingCart cart={cart} id={nextId} />
+          <ShoppingCart cart={cart} />
         </>
       );
     }

@@ -2,22 +2,25 @@ import CartItem from "../CartItem/CartItem";
 
 function ShoppingCart(props) {
   let total = 0;
-  let nextId = 0;
+
   const cartList = props.cart.map((item) => (
-    <>
-      <li key={nextId}>
-        <CartItem image={item.item.image}></CartItem>
-        {(total += item.item.price)}
-        {(nextId += 1)}
-        {console.log(item)}
-      </li>
-    </>
+    <ul>
+      <CartItem image={item.item.image} key={item.item.id} />
+      {(total += item.item.price)}
+    </ul>
   ));
+
+  {
+    console.log({ cartList }.cartList.length);
+  }
+  if ({ cartList }.cartList.length == 0) {
+    return <p>Cart Empty</p>;
+  }
 
   return (
     <div>
-      <ul>{cartList}</ul>
-      <p>Total: {total}</p>
+      {cartList}
+      <p>Total: ${total}</p>
     </div>
   );
 }
