@@ -1,12 +1,18 @@
 import CartItem from "../CartItem/CartItem";
 
 function ShoppingCart(props) {
-  const cartList = props.cart.map((item) => (
-    <CartItem image={item.item.image}></CartItem>
+  let total = 0;
+  const cartList = props.cart.map((item, id) => (
+    <>
+      <CartItem image={item.item.image} key={id}></CartItem>
+      {(total += item.price)}
+    </>
   ));
+
   return (
     <div>
       <ul>{cartList}</ul>
+      <p>Total: {total}</p>
     </div>
   );
 }
