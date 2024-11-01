@@ -76,7 +76,7 @@ function App() {
       return (
         <>
           <NavBar onClick={toggleShowCart} />
-          <ShoppingCart cart={cart} />
+          <ShoppingCart cart={cart} id={nextId} />
         </>
       );
     }
