@@ -2,7 +2,7 @@ import styles from "./CartItem.module.css";
 
 function CartItem(props) {
   return (
-    <li className={styles.item}>
+    <li className={styles.item} key={props.key}>
       <img className={styles.product} src={props.image} alt="" />
       <div>
         <p>QTY</p>
