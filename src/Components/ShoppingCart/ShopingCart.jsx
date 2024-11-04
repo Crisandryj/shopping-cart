@@ -10,11 +10,8 @@ function ShoppingCart(props) {
     </ul>
   ));
 
-  {
-    console.log({ cartList }.cartList.length);
-  }
   if ({ cartList }.cartList.length == 0) {
-    return <p>Cart Empty</p>;
+    return <h2>Cart Empty</h2>;
   }
 
   return (
