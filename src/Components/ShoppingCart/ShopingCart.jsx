@@ -5,8 +5,10 @@ function ShoppingCart(props) {
 
   const cartList = props.cart.map((item) => (
     <ul>
-      <CartItem image={item.item.image} key={item.item.id} />
-      {(total += item.item.price)}
+      <li key={crypto.randomUUID}>
+        <CartItem image={item.item.image} />
+        {(total += item.item.price)}
+      </li>
     </ul>
   ));
 
