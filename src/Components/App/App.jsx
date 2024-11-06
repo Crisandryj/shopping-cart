@@ -22,7 +22,7 @@ function App() {
 
   const addToCart = (item) => {
     cart.push({
-      key: crypto.randomUUID(),
+      id: crypto.randomUUID(),
       item: item,
     });
   };
