@@ -2,6 +2,7 @@ import CartItem from "../CartItem/CartItem";
 import { useState } from "react";
 
 function ShoppingCart(props) {
+  //stoe total cost of cart
   let [total, setTotal] = useState(0);
 
   const cartList = props.cart.map((item) => (
