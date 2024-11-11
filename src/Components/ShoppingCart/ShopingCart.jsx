@@ -19,7 +19,6 @@ function ShoppingCart(props) {
   return (
     <div>
       <ul>{cartList}</ul>
-
       <p>Total: ${total}</p>
     </div>
   );
