@@ -2,13 +2,12 @@ import CartItem from "../CartItem/CartItem";
 import { useState } from "react";
 
 function ShoppingCart(props) {
-  //stoe total cost of cart
+  //store total cost of carts
   let [total, setTotal] = useState(0);
 
   const cartList = props.cart.map((item) => (
     <li className="hello" key={item.id}>
       <CartItem image={item.item.image} />
-      {setTotal((total += item.price))}
     </li>
   ));
 
