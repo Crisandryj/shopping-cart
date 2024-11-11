@@ -6,8 +6,9 @@ function ShoppingCart(props) {
   let [total, setTotal] = useState(0);
 
   const cartList = props.cart.map((item) => (
-    <li className="hello" key={item.id}>
+    <li key={item.id}>
       <CartItem image={item.item.image} />
+      {(total += item.item.price)}
     </li>
   ));
 
@@ -18,6 +19,7 @@ function ShoppingCart(props) {
   return (
     <div>
       <ul>{cartList}</ul>
+
       <p>Total: ${total}</p>
     </div>
   );
