@@ -1,5 +1,5 @@
 import CartItem from "../CartItem/CartItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ShoppingCart(props) {
   //store total cost of carts
@@ -8,8 +8,14 @@ function ShoppingCart(props) {
   const cartList = props.cart.map((item) => (
     <li key={item.id}>
       <CartItem image={item.item.image} />
+      {item.item.price}
     </li>
   ));
+
+  useEffect(() => {
+    const newTotal = props.cart.reduce((sum, obj) => sum + obj.item.price, 0);
+    setTotal(newTotal);
+  }, []);
 
   if ({ cartList }.cartList.length == 0) {
     return <h2>Cart Empty</h2>;
