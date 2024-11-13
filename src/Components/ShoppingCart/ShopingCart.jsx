@@ -15,6 +15,10 @@ function ShoppingCart(props) {
   useEffect(() => {
     const newTotal = props.cart.reduce((sum, obj) => sum + obj.item.price, 0);
     setTotal(newTotal);
+
+    return () => {
+      setTotal(0);
+    };
   }, []);
 
   if ({ cartList }.cartList.length == 0) {
