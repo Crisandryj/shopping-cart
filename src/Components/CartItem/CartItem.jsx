@@ -1,4 +1,5 @@
 import styles from "./CartItem.module.css";
+import { useState } from "react";
 
 function CartItem(props) {
   return (
