@@ -21,10 +21,17 @@ function App() {
   };
 
   const addToCart = (item) => {
-    cart.push({
-      id: crypto.randomUUID(),
-      item: item,
-    });
+    if (cart.some((cart) => cart.item.title == item.title)) {
+      let currentItem = cart.find((cart) => cart.item.title === item.title);
+      currentItem.quantity += 1;
+      console.log(currentItem);
+    } else {
+      cart.push({
+        id: crypto.randomUUID(),
+        item: item,
+        quantity: 1,
+      });
+    }
   };
 
   useEffect(() => {
