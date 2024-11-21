@@ -7,13 +7,16 @@ function ShoppingCart(props) {
 
   const cartList = props.cart.map((item) => (
     <li key={item.id}>
-      <CartItem image={item.item.image} />
-      {item.item.price}
+      <CartItem quantity={item.quantity} image={item.item.image} />
+      <p> {item.item.price}</p>
     </li>
   ));
 
   useEffect(() => {
-    const newTotal = props.cart.reduce((sum, obj) => sum + obj.item.price, 0);
+    const newTotal = props.cart.reduce(
+      (sum, obj) => sum + obj.item.price * obj.quantity,
+      0
+    );
     setTotal(newTotal);
 
     return () => {

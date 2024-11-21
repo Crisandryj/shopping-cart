@@ -6,7 +6,7 @@ function CartItem(props) {
     <div className={styles.item}>
       <img className={styles.product} src={props.image} alt="" />
       <div>
-        <p>QTY</p>
+        <p>QTY: {props.quantity}</p>
         <button>+</button>
         <button>-</button>
       </div>
