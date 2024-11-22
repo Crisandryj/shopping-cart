@@ -12,6 +12,7 @@ function App() {
   const [showCart, setShowCart] = useState(false);
   const [cart, setCart] = useState([]);
 
+  // show main page or cart
   const toggleShowCart = () => {
     if (showCart) {
       setShowCart(false);
