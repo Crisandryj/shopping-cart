@@ -7,7 +7,7 @@ function CartItem(props) {
       <img className={styles.product} src={props.image} alt="" />
       <div>
         <p>QTY: {props.quantity}</p>
-        <button>+</button>
+        <button onClick={props.handlePlusclick}>+</button>
         <button>-</button>
       </div>
     </div>

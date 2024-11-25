@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 function ShoppingCart(props) {
   //store total cost of carts
   let [total, setTotal] = useState(0);
+  let [quantity, setQuantity] = useState(0);
 
-  const handlePlusclick = (item) => {};
   const cartList = props.cart.map((item) => (
     <li key={item.id}>
       <CartItem
         quantity={item.quantity}
         image={item.item.image}
-        handlePlusclick={(item) => {
+        handlePlusclick={() => {
           item.quantity += 1;
         }}
       />
