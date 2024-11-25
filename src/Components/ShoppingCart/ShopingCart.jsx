@@ -5,9 +5,16 @@ function ShoppingCart(props) {
   //store total cost of carts
   let [total, setTotal] = useState(0);
 
+  const handlePlusclick = (item) => {};
   const cartList = props.cart.map((item) => (
     <li key={item.id}>
-      <CartItem quantity={item.quantity} image={item.item.image} />
+      <CartItem
+        quantity={item.quantity}
+        image={item.item.image}
+        handlePlusclick={(item) => {
+          item.quantity += 1;
+        }}
+      />
       <p> {item.item.price}</p>
     </li>
   ));

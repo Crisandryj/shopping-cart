@@ -34,14 +34,6 @@ function App() {
     }
   };
 
-  const handlePlusClick = (item) => {
-    item[quantity] += 1;
-  };
-
-  const handleMinusClick = (item) => {
-    item[quantity] -= 1;
-  };
-
   useEffect(() => {
     const fetchDataForPosts = async () => {
       try {
