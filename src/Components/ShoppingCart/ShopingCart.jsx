@@ -29,7 +29,7 @@ function ShoppingCart(props) {
     return () => {
       setTotal(0);
     };
-  }, []);
+  }, [quantity]);
 
   if ({ cartList }.cartList.length == 0) {
     return <h2>Cart Empty</h2>;
