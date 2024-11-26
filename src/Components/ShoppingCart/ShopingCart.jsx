@@ -23,6 +23,15 @@ function ShoppingCart(props) {
   ));
 
   useEffect(() => {
+    props.cart.forEach((item, index) => {
+      console.log(item);
+      if (item.quantity <= 0) {
+        props.cart.splice(index, 1);
+      }
+    });
+  }, [quantity]);
+
+  useEffect(() => {
     const newTotal = props.cart.reduce(
       (sum, obj) => sum + obj.item.price * obj.quantity,
       0
