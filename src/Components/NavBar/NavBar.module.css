@@ -1,9 +1,5 @@
-body {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.logo-shop {
-  background-color: red;
-  size: 10px;
+.container {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
