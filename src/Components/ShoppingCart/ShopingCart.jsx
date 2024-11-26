@@ -12,7 +12,7 @@ function ShoppingCart(props) {
         quantity={item.quantity}
         image={item.item.image}
         handlePlusclick={() => {
-          item.quantity += 1;
+          setQuantity((item.quantity += 1));
         }}
       />
       <p> {item.item.price}</p>
