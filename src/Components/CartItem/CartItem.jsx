@@ -8,7 +8,7 @@ function CartItem(props) {
       <div>
         <p>QTY: {props.quantity}</p>
         <button onClick={props.handlePlusclick}>+</button>
-        <button>-</button>
+        <button onClick={props.handleMinusclick}>-</button>
       </div>
     </div>
   );

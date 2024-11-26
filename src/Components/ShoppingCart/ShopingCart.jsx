@@ -14,6 +14,9 @@ function ShoppingCart(props) {
         handlePlusclick={() => {
           setQuantity((item.quantity += 1));
         }}
+        handleMinusclick={() => {
+          setQuantity((item.quantity -= 1));
+        }}
       />
       <p> {item.item.price}</p>
     </li>
