@@ -4,7 +4,8 @@ import NavBar from "../NavBar/NavBar";
 import Card from "../Card/Card";
 import { useEffect, NavLink } from "react";
 import ShoppingCart from "../ShoppingCart/ShopingCart";
-
+import Home from "../Home/home";
+import Shopping from "../Shopping/Shopping";
 function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -60,23 +61,7 @@ function App() {
   } else {
     if (showCart == false) {
       return (
-        <div>
-          <NavBar onClick={toggleShowCart} />
-          <ul>
-            {data &&
-              data.map(({ id, image, title, price }) => (
-                <li key={id}>
-                  <Card
-                    key={id}
-                    image={image}
-                    title={title}
-                    price={price}
-                    onClick={addToCart}
-                  ></Card>
-                </li>
-              ))}
-          </ul>
-        </div>
+        <Shopping showCart={toggleShowCart} data={data} addToCart={addToCart} />
       );
     } else {
       return (
