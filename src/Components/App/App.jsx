@@ -80,10 +80,10 @@ function App() {
       );
     } else {
       return (
-        <>
+        <div>
           <NavBar onClick={toggleShowCart} />
           <ShoppingCart cart={cart} />
-        </>
+        </div>
       );
     }
   }
