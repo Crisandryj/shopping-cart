@@ -11,16 +11,30 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showCart, setShowCart] = useState(false);
+  const [page, setPage] = useState("home");
   const [cart, setCart] = useState([]);
 
   // show main page or cart
-  const toggleShowCart = () => {
-    if (showCart) {
-      setShowCart(false);
-    } else {
-      setShowCart(true);
-    }
+  // const toggleShowCart = () => {
+  //   if (showCart) {
+  //     setShowCart(false);
+  //   } else {
+  //     setShowCart(true);
+  //   }
+  // };
+
+  const toggleShopping = () => {
+    setPage("shopping");
   };
+
+  const toggleCart = () => {
+    setPage("Cart");
+  };
+
+  const toggleHome = () => {
+    setPage("home");
+  };
+
   const addToCart = (item) => {
     if (cart.some((cart) => cart.item.title == item.title)) {
       let currentItem = cart.find((cart) => cart.item.title === item.title);
@@ -58,15 +72,26 @@ function App() {
   if (loading) {
     return <p> loading</p>;
   } else {
-    if (showCart == false) {
+    if (page == "shopping") {
       return (
-        <Shopping showCart={toggleShowCart} data={data} addToCart={addToCart} />
+        <Shopping showCart={toggleCart} data={data} addToCart={addToCart} />
+      );
+    } else if (page == "cart") {
+      return (
+        <div>
+          <NavBar
+            onClickHome={toggleHome}
+            onClickShopping={toggleShopping}
+            onClickCart={toggleCart}
+          />
+          <ShoppingCart cart={cart} />
+        </div>
       );
     } else {
       return (
         <div>
-          <NavBar onClick={toggleShowCart} />
-          <ShoppingCart cart={cart} />
+          <NavBar showCart={toggleCart} data={data} addToCart={addToCart} />
+          <Home />
         </div>
       );
     }
