@@ -14,21 +14,12 @@ function App() {
   const [page, setPage] = useState("home");
   const [cart, setCart] = useState([]);
 
-  // show main page or cart
-  // const toggleShowCart = () => {
-  //   if (showCart) {
-  //     setShowCart(false);
-  //   } else {
-  //     setShowCart(true);
-  //   }
-  // };
-
   const toggleShopping = () => {
     setPage("shopping");
   };
 
   const toggleCart = () => {
-    setPage("Cart");
+    setPage("cart");
   };
 
   const toggleHome = () => {
@@ -74,7 +65,14 @@ function App() {
   } else {
     if (page == "shopping") {
       return (
-        <Shopping showCart={toggleCart} data={data} addToCart={addToCart} />
+        <>
+          <NavBar
+            onClickHome={toggleHome}
+            onClickShopping={toggleShopping}
+            onClickCart={toggleCart}
+          />
+          <Shopping showCart={toggleCart} data={data} addToCart={addToCart} />
+        </>
       );
     } else if (page == "cart") {
       return (
@@ -87,10 +85,16 @@ function App() {
           <ShoppingCart cart={cart} />
         </div>
       );
-    } else {
+    } else if (page == "home") {
       return (
         <div>
-          <NavBar showCart={toggleCart} data={data} addToCart={addToCart} />
+          <NavBar
+            onClickHome={toggleHome}
+            onClickShopping={toggleShopping}
+            onClickCart={toggleCart}
+            data={data}
+            addToCart={addToCart}
+          />
           <Home />
         </div>
       );
