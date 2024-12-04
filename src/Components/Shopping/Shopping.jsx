@@ -4,7 +4,6 @@ import Card from "../Card/Card";
 function Shopping(props) {
   return (
     <div>
-      <NavBar onClick={props.showCart} />
       <ul>
         {props.data &&
           props.data.map(({ id, image, title, price }) => (
