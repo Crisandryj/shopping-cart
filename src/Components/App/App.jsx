@@ -21,7 +21,6 @@ function App() {
       setShowCart(true);
     }
   };
-
   const addToCart = (item) => {
     if (cart.some((cart) => cart.item.title == item.title)) {
       let currentItem = cart.find((cart) => cart.item.title === item.title);
