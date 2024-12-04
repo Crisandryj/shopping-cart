@@ -9,12 +9,12 @@ function NavBar(props) {
       <button onClick={props.onClickCart}>
         <img src={shopCart} className="logo-shop" alt="React logo" />
       </button>
+
       <button onClick={props.onClickHome}>
-        {" "}
         <img src={home} className="logo-shop" alt="React logo" />
       </button>
+
       <button onClick={props.onClickShopping}>
-        {" "}
         <img src={bag} className="logo-shop" alt="React logo" />
       </button>
     </div>
