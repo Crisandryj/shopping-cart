@@ -1,7 +1,10 @@
 function Home() {
   return (
     <>
-      <h1>test</h1>
+      <div class="block"></div>
+      <h1>Welcome to our store!</h1>
+      <p>We have the best prices guranteed!</p>
+      <div class="block"></div>
     </>
   );
 }
