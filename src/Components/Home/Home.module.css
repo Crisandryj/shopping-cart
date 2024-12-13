@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+section {
+  margin-top: 75px;
+  position: relative;
+  min-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(../../assets/storeimg.jpg) no-repeat;
+  background-position: center;
+}
