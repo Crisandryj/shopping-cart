@@ -16,6 +16,11 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   background: url(../../assets/storeimg.jpg) no-repeat;
   background-position: center;
+}
+
+h2 {
+  padding-left: 100px;
 }
