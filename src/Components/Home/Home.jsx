@@ -2,12 +2,14 @@ import styles from "./Home.module.css";
 
 function Home() {
   return (
-    <>
-      <div className={styles.block}></div>
-      <h1>Welcome to our store!</h1>
-      <p>We have the best prices guranteed!</p>
-      <div className={styles.block}></div>
-    </>
+    <section>
+      <div className="content">
+        <div className="welcome">
+          <h2>Welcome to our store!</h2>
+          <p>We guarantee the best prices!</p>
+        </div>
+      </div>
+    </section>
   );
 }
 
